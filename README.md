@@ -1,0 +1,2 @@
+# syncora
+Social Media App
