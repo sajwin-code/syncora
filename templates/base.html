@@ -1,0 +1,55 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>{% if title %}
+        {{ title }}
+    {% else %}
+        Syncora - Connect, Share, and Explore
+    {% endif %}</title>
+</head>
+<body>
+
+    <!-- <div class="nav">
+        <span class="logo">Syncora</span>
+        <div class="center">
+        </div>
+        <div class="right">
+
+        </div>
+    </div> -->
+
+    <div class="side-panel" id="sidePanel">
+        <div class="logo">
+            <span class="logo-icon">S</span>
+            <span class="logo-text">Syncora</span>
+        </div>
+        
+        <div class="search"></div>
+
+        <div class="groups">
+            <span class="groups-title">Your Groups</span>
+
+            <div class="group">
+                <span class="group-icon">G</span>
+                <span class="group-text">Group 1</span>
+            </div>
+        </div>
+
+        <div class="friends">
+            <span class="friends-title">Your Friends</span>
+            <div class="friend">
+                <span class="friend-icon">F</span>
+                <span class="friend-text">Friend 1</span>
+            </div>
+        </div>
+
+    </div>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
