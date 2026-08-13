@@ -1,7 +1,7 @@
 from django.db import models, transaction
 from django.contrib.auth.models import AbstractUser
 from django.core.exceptions import ValidationError
-
+from django.utils import timezone
 import string
 
 # Create your models here.
@@ -202,7 +202,7 @@ class FriendRequest(models.Model):
     objects = FriendRequestManager()
 
 
-    created_at = models.DateTimeField(auto_now_add=True)
+    created_at = models.DateTimeField(default=timezone.now)
 
     class Meta:
         constraints = [
@@ -232,7 +232,7 @@ class Post(models.Model):
     )
 
     created_at = models.DateTimeField(
-        auto_now_add=True,
+        default=timezone.now,
     )
 
     updated_at = models.DateTimeField(
